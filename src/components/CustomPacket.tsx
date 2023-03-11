@@ -10,10 +10,10 @@ const CustomPacket: React.FC = () => {
   const { userDataState, setUserDataState } = useContext(UserDataContext);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  //responsiveness icin bu veriyi asagida kullaniyorum. sayfanin sag tarafini gizlemek icin, burger menu cikartmak icin.
+  //responsiveness icin bu state'i ve bir adet event listener calistirdigim useEffect i kullaniyorum. sayfanin sag tarafini gizlemek icin, burger menu cikartmak icin.
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
-  // buradaki effect kullanimi ile global state uzerinde degisen degerleri birim fiyatlariyla carpiyorum.
+  // buradaki effect kullanimi ile global state uzerinde degisen miktarlari, prices.ts dosyasindan cektigim birim fiyatlarla carpiyorum.
   React.useEffect(() => {
     setTotalPrice(
         userDataState.standardPadValue * prices.standardPadPrice +

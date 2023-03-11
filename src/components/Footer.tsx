@@ -18,6 +18,9 @@ function Footer() {
   return (
     
       <div className="footer--container">
+        {/*footer iki kisimdan olusuyor, upper ve info container seklinde. info container icerisinde footerin cizgisinden asagisi mevcut 
+        upper containerinda ise keep in touch kismi, logo  ve 3 ayri liste seklinde navlinkler bulunmakta.
+        responsiveness kismini asagidaki style prop'u ile yaptim. one liner if else statement olarak calismakta sayfa 1050den kucukse style degisiyor */}
         <div className="footer--upper" style={windowSize < 1050 ? {textAlign:'center',justifyContent:'center',flexDirection:'column'} : {}}>
           <div className="footer--left">
             
@@ -93,7 +96,7 @@ function Footer() {
           </div>
         </div>
 
-      {/*footer icin responsiveness kismini asagidaki style prop'u ile yaptim. one liner if else statement olarak calismakta sayfa 1050den kucukse style degisiyor */}
+      
         <div className="footer--info--container">
           <div className="footer--info" style={windowSize < 1050 ? {textAlign:'center',alignSelf:'center',flexDirection:'column'} : {}}>
             <>

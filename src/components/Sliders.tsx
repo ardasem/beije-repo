@@ -7,6 +7,11 @@ import Slider from "@mui/material/Slider";
 function Sliders() {
   const { userDataState, setUserDataState } = useContext(UserDataContext); 
 
+  
+//her slider icin farkli bir handler fonksiyonu yazmam gerekti 
+//cunku hepsi icin global state uzerinde ayrica tuttugum bir deger var.
+//asagidaki 7 fonksiyonun her biri 7 farkli urun icin tutulan verinin degerini degistirmekte
+
   const handleSlider1Change = (event: Event, newValue: number | number[]) => {
     setUserDataState({
       ...userDataState,
@@ -57,10 +62,17 @@ function Sliders() {
   return (
     <div>
       <div className="slider--container">
+         {/* Burada gormus oldugunuz p elementi\ bir ust componentte guncellenen tab datasina gore slider basliklarini degistirmekte , 
+         slider 2 ve slider 3 icin de asagida birer p elementi bulunuyor. */}
+
         <p>{userDataState.sliderName1}</p>
         <div className="slider--data">
           <p>0</p>
-
+          {/* Burada gormus oldugunuz conditional rendering bir ust componentte guncellenen tab datasina gore sliderlarin gosterecekleri datayi degistiriyor,
+          bazi durumda direkt olarak slideri gostermiyor. 
+          ilk tab icin 1,2 ve 3 nolu handle fonksiyonlari
+          ikinci tab icin 4 ve 5 nolu handle fonksiyonlari
+          ucuncu tab icin ise 6 ve 7 nolu handle fonksiyonlari calismakta ve slider value lari da bu sirayla gosterilmekte. */}
           {userDataState.tab == 0 && (
             <Slider
               className="slider"
