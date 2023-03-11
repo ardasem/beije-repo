@@ -5,8 +5,6 @@ import prices from "../context/prices"; //Urun birim fiyatlari sabit oldugu ve b
 import Sliders from "./Sliders";
 import CartComponent from "./CartComponent";
 
-//css duzeltilecek
-//responsiveness bakilacak
 
 const CustomPacket: React.FC = () => {
   const { userDataState, setUserDataState } = useContext(UserDataContext);
@@ -18,7 +16,7 @@ const CustomPacket: React.FC = () => {
   // buradaki effect kullanimi ile global state uzerinde degisen degerleri birim fiyatlariyla carpiyorum.
   React.useEffect(() => {
     setTotalPrice(
-      userDataState.standardPadValue * prices.standardPadPrice +
+        userDataState.standardPadValue * prices.standardPadPrice +
         userDataState.superPadValue * prices.superPadPrice +
         userDataState.superPlusPadValue * prices.superPlusPadPrice +
         userDataState.dailyPadValue * prices.dailyPadPrice +
@@ -86,13 +84,13 @@ const CustomPacket: React.FC = () => {
 
         <div className="custompacket--container">
 
-        <div className="custompacket--left">
+        <div className="custompacket--left" style={windowSize < 1050 ? {minWidth:'100%'} : {}}>
           <div className="custompacket--header">
             <h1>Kendi Paketini Oluştur</h1>
             <a>Nasıl Çalışır?</a>
           </div>
 
-          <span style={{ fontSize:'1.1rem',fontWeight: 200 }}>
+          <span className='text--span' >
             Tercih ve ihtiyaçların doğrultusunda seçeceğin ürünlerden ve 
             miktarlardan, sana özel bir paket oluşturalım.
           </span>
@@ -124,14 +122,22 @@ const CustomPacket: React.FC = () => {
          
             
           {/*Sliderlari ayri bir component olarak kullandim, o componentin icerisinde yorumlari gorebilirsiniz*/}
-          <Sliders />
+         
+         
+          <div > <Sliders /> </div>
 
-          {windowSize < 850 &&<button className="check-out--button" style={{width:'100%'}}> Paketini Gor</button>}
+       
+          {/* bu kisimda sadece responsiveness ayari yapiyorum, sayfa kuculunce paketini gor butonu gozukuyor */}
+          {windowSize < 1050 &&<button className="check-out--button" style={{width:'100%',alignSelf:'center'}}> Paketini Gör</button>}
         </div>
 
-        {/*Bu kisim ekranin sag kisminin bulundugu container, burada da urun isimlerini ve miktarlarini sartli olarak gosterebilmek icin
-      ayri bir Cartcomponent icerisine yerlestirdim. */}
-       {windowSize > 850 &&<div className="custompacket--right">
+        {/*Bu kisim ekranin sag kisminin bulundugu container, burada da urun isimlerini ve miktarlarini gosterebilmek icin
+      ayri bir Cartcomponent icerisine yerlestirdim. 
+      
+      ayni zamanda responsiveness ayarini buradaki windowSize degiskenine gore ayarliyorum. sayfa ufalinca sol taraftaki component gorunmuyor.
+
+      */}
+       {windowSize > 1050 && <div className="custompacket--right">
           <div>
             <h1>Özel Paketin</h1>
 

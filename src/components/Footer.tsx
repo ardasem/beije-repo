@@ -1,10 +1,24 @@
 import React from "react";
+import {useState} from 'react'
 
 function Footer() {
+
+  //windowSize degisimini yakalayabilmek icin useState ve useEffect kullandim.
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  React.useEffect(()=>{
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    }
+
+    window.addEventListener('resize',handleResize)
+
+  },[]);
+
   return (
     
       <div className="footer--container">
-        <div className="footer--upper">
+        <div className="footer--upper" style={windowSize < 1050 ? {textAlign:'center',justifyContent:'center',flexDirection:'column'} : {}}>
           <div className="footer--left">
             
             <div className="keep--in--touch">
@@ -41,7 +55,7 @@ function Footer() {
               </li>
             </ul>
 
-            <ul className="footer--list">
+            <ul className="footer--list" >
               <li className="footer--upper--list--element">
                 <a>Blog</a>
               </li>
@@ -79,14 +93,15 @@ function Footer() {
           </div>
         </div>
 
+      {/*footer icin responsiveness kismini asagidaki style prop'u ile yaptim. one liner if else statement olarak calismakta sayfa 1050den kucukse style degisiyor */}
         <div className="footer--info--container">
-          <div className="footer--info">
+          <div className="footer--info" style={windowSize < 1050 ? {textAlign:'center',alignSelf:'center',flexDirection:'column'} : {}}>
             <>
               <p className="copyright">2023 beije. Tüm hakları saklıdır.</p>
             </>
 
             <>
-              <ul className="footer--info--list ">
+              <ul className="footer--info--list " style={windowSize < 1050 ? {alignSelf:'center',flexDirection:'column'} : {}}>
                 <a className="footer--list--element" href="">
                   KVKK Aydınlatma Metni
                 </a>

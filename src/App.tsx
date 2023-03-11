@@ -4,6 +4,7 @@ import "./App.css";
 import './styles/BodyStyle.css'
 import './styles/HeaderStyle.css'
 import './styles/FooterStyle.css'
+import './styles/BurgerMenuStyle.css'
 
 import Header from "./components/Header";
 import CustomPacket from "./components/CustomPacket";

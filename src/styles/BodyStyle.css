@@ -21,7 +21,7 @@
   
   .custompacket--left {
     flex: 1;
-    min-width: 45%;
+    min-width: 40%;
     
   }
   
@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 300px;
+    gap: 200px;
     
   }
 
@@ -71,18 +71,22 @@
   .category--list--item:active::after {
     visibility: visible;
   }
+
+  .category--list--item:focus::after {
+    visibility: visible;
+  }
   
   
   .slider--data{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     
   }
   
-  .slider{
-    margin:15px;
-  }
+  
+  
   
   .check-out--button{
     
@@ -129,4 +133,9 @@
     margin-top:30px;
     margin-bottom: 30px;
 
+  }
+
+  .text--span{
+    font: size 1.1rem;
+    font-weight: 200;
   }

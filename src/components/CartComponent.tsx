@@ -52,7 +52,9 @@ const CartComponent: React.FC = () => {
   return (
     <div className="cart--info--container">
 
-    <div>
+
+
+    <div className="cart--info">
     <h2>
         {userDataState.standardPadValue ||
         userDataState.superPadValue ||
@@ -64,7 +66,7 @@ const CartComponent: React.FC = () => {
         {userDataState.standardPadValue
           ? `${userDataState.standardPadValue} ${padTypesArray[0]}`
           : ""}
-        {userDataState.superPadValue
+        {userDataState.superPadValue 
           ? ` ${userDataState.superPadValue} ${padTypesArray[1]}`
           : ""}
 
@@ -81,7 +83,7 @@ const CartComponent: React.FC = () => {
       </p>
     </div>
      
-
+    <div className="cart--info">
       <h2>
         {userDataState.dailyPadValue || userDataState.superDailyPadValue
           ? headerArray[1]
@@ -101,7 +103,9 @@ const CartComponent: React.FC = () => {
           ? "Paketten Çıkart"
           : ""}
       </p>
+      </div>
 
+      <div className="cart--info">
       <h2>
         {userDataState.miniTamponValue || userDataState.standardTamponValue
           ? headerArray[2]
@@ -121,6 +125,8 @@ const CartComponent: React.FC = () => {
           ? "Paketten Çıkart"
           : ""}
       </p>
+      </div>
+
     </div>
   );
 };

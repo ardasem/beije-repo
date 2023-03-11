@@ -1,6 +1,22 @@
 import React from "react";
+import {useState,useEffect} from 'react'
+import Menu from './BurgerMenu'
 
 function Header() {
+
+  //Bu useEffect de sayfayi responsive olarak yazabilmek icin window size width ini otomatik olarak guncelliyor.
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(()=>{
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    }
+
+    window.addEventListener('resize',handleResize)
+
+  },[]);
+
+
   return (
     <header className="header--wrapper">
       
@@ -11,7 +27,7 @@ function Header() {
           alt="beije-logo"
         />
 
-        <div>
+        {windowSize > 1050 && <nav>
           <ul className="nav--pages">
             <a className="nav--link" href="">
               Ürünler
@@ -29,12 +45,14 @@ function Header() {
               Kendi Paketini Oluştur!
             </a>
           </ul>
-        </div>
+        </nav>}
 
-        <div className="icon--container">
+        <div className="icon--container" >
           <img className="icon" src="./icons/cart.png" alt="" />
           <img className="icon" src="./icons/profile.png" alt="" />
         </div>
+
+        {windowSize < 1050 &&  <Menu/> }
       </div>
     </header>
   );
