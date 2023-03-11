@@ -1,0 +1,132 @@
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    justify-content: space-around;
+  }
+
+
+  
+  
+  .custompacket--container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;  
+    margin-left: 15% ;
+    gap: 100px;
+    margin-bottom: 130px;
+   
+  }
+  
+  .custompacket--left {
+    flex: 1;
+    min-width: 45%;
+    
+  }
+  
+  .custompacket--header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 300px;
+    
+  }
+
+
+  
+  .custompacket--right {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 70px;
+    flex: 1;
+    min-width: 30%;
+    margin-right: 400px
+  }
+  
+  .custompacket--right>img{
+    max-width: 450px;
+  }
+  
+  .category--list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+  
+  .category--list--item{
+    padding: 50px 50px 0px 50px;
+    cursor: pointer;
+  }
+  
+  .category--list--item::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: rgb(35,35,35);
+    visibility: hidden;
+  }
+  
+  .category--list--item:active::after {
+    visibility: visible;
+  }
+  
+  
+  .slider--data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+  }
+  
+  .slider{
+    margin:15px;
+  }
+  
+  .check-out--button{
+    
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    font-weight: 700;
+    max-width: 410px;
+    margin-top: 50px;
+    padding: 12px 22px 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(52, 49, 49);
+    width: 100%;
+    border-radius: 64px;
+    font-family: Gordita;
+    font-size: 1rem;    
+    
+  }
+  
+  .addtocart--paragraph{
+    text-align: center;
+    cursor: pointer;
+    font-weight: bolder;
+    min-width: 64px;
+    max-width: 410px;
+    padding: 12px 22px 10px;
+    font-family: Gordita;
+    font-size: 1rem;
+    line-height: 162%;
+    letter-spacing: -0.015em;
+    color:rgb(175,175,175)
+  }
+
+  .delete--button{
+    cursor: pointer;
+
+  }
+
+  .refresh{
+    display: flex;
+    flex-direction: row;
+    max-height: 30px;
+    align-items: center;
+    margin-top:30px;
+    margin-bottom: 30px;
+
+  }

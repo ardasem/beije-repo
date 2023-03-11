@@ -1,0 +1,47 @@
+.header--wrapper {
+   margin:20px;
+  
+  }
+
+  .header--container{
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .beije--logo {
+    max-height: 45px;
+  }
+  
+  .nav--link {
+    font-family: Gordita;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    letter-spacing: -0.01em;
+    color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    white-space: nowrap;
+    text-decoration: none;
+    margin-left: 35px;
+
+  }
+  
+  .nav--link:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+    transition: 500ms;
+  }
+  
+  .icon--container {
+    align-self: center;
+    margin-left: 220px;
+  }
+  
+  .icon {
+    align-self: center;
+    padding: 5px;
+    max-height: 23px;
+    margin-left: 22px;
+  }
+  

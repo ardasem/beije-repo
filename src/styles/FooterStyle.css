@@ -1,0 +1,185 @@
+.footer--container {
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  color: rgb(196, 196, 196);
+  background-color: rgb(38, 38, 38);
+  
+}
+
+.footer--upper {
+  display: flex;
+  flex-direction: row;
+  margin:90px;
+  margin-right: 190px;
+  margin-bottom: 30px;
+  padding: 0px;
+  justify-content: flex-start;
+
+}
+
+/* footer in sol tarafi icin bu kisimda styling yapiyorum*/
+.footer--left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+ }
+
+.beije--logo--black {
+   max-width: 100px;
+}
+
+
+
+/* footer in sag tarafi icin bu kisimda styling yapiyorum*/
+.footer--right {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  
+}
+
+.footer--list {
+  margin-top: 50px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 50px;
+}
+
+.footer--upper--list--element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  cursor: pointer;
+  font-family: Gordita;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.01em;
+  color: rgb(196, 196, 196);
+}
+
+.footer--list--element {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  font-family: Gordita;
+  font-weight: 100;
+  font-size: 0.9rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.01em;
+  color: rgb(196, 196, 196);
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.footer--email {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: baseline;
+}
+
+.footer--text--area {
+  background-color: rgb(38, 38, 38);
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 10px;
+  height: 30px;
+  width: 480px;
+  resize: none;
+  font-family: Gordita;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.button {
+  margin-left: 20px;
+  background-color: rgb(196, 196, 196);
+  border: none;
+  border-radius: 25px;
+  width: 90px;
+  height: 50px;
+  font-family: Gordita;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  margin-left: 20px;
+  background-color: rgb(38, 38, 38);
+  border: none;
+  border-radius: 25px;
+  width: 90px;
+  height: 50px;
+  font-family: Gordita;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  text-align: center;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
+    rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+}
+
+.footer--info--container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+ 
+}
+
+.footer--info {
+  display: flex;
+  width: 90%;
+  background-color: rgb(38, 38, 38);
+  margin: 90px;
+  margin-top: 0px;
+  margin-bottom:30px;
+  padding-top: 30px;
+  border-top: 1px solid rgb(196, 196, 196);
+  justify-content: space-between;
+
+
+}
+
+.footer--info--list {
+  display: flex;
+  flex-direction: row;
+}
+
+.languages {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.payment--icons {
+  margin: auto;
+  margin-bottom:30px;
+}
+
+.payment-icon {
+    padding: 10px;
+    
+}
