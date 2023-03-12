@@ -23,7 +23,7 @@
 .custompacket--header {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   gap: 200px;
 }
@@ -48,7 +48,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 15%;
-  margin-top: 30px;
+  margin-top: 80px;
   margin-bottom: 30px;
 }
 
@@ -56,7 +56,7 @@
   border: none;
   font-weight: 400;
   font-size: large;
-  color: rgb(175, 175, 175);
+  color: rgb(52, 49, 49);
   cursor: pointer;
 }
 
@@ -64,7 +64,7 @@
   content: "";
   display: block;
   height: 3px;
-  background: rgb(175, 175, 175);
+  background: rgb(52, 49, 49);
   visibility: hidden;
 }
 
@@ -141,6 +141,8 @@
 .text--span {
   font: size 1.1rem;
   font-weight: 200;
+  
+  
   
 }
 

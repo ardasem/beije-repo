@@ -4,17 +4,17 @@
 }
 
 .body {
-  
   box-sizing: border-box;
   margin: 0px;
   max-width: 50px;
-background-color: rgb(249, 245, 242);
+  background-color: rgb(249, 245, 242);
+  font-family: Gordita;
 }
 
-h1{
+h1 {
   font-weight: 500;
 }
 
-h2{
+h2 {
   font-weight: 400;
 }

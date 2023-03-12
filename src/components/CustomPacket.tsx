@@ -5,6 +5,7 @@ import prices from "../context/prices"; //Urun birim fiyatlari sabit oldugu ve b
 import Sliders from "./Sliders";
 import CartComponent from "./CartComponent";
 
+//burasi body'nin bulundugu sayfa
 
 const CustomPacket: React.FC = () => {
   const { userDataState, setUserDataState } = useContext(UserDataContext);
@@ -80,20 +81,24 @@ const CustomPacket: React.FC = () => {
   return (
     //bu wrapper footer ve body yi bir arada tutmami sagliyor ve footer'in hep asagida kalmasina yariyor.
     <div className="wrapper">
-      <div>
+      
+      <div className="body--wrapper">
 
         <div className="custompacket--container">
 
         <div className="custompacket--left" style={windowSize < 1050 ? {marginLeft:'5%'} : {}}>
           <div className="custompacket--header">
-            <h1 >Kendi Paketini Oluştur</h1>
+            <h1>Kendi Paketini Oluştur</h1>
             {windowSize>1050 ? <a>Nasıl Çalışır?</a>: <div/>}
+            
           </div>
 
           <span className='text--span' >
             Tercih ve ihtiyaçların doğrultusunda seçeceğin ürünlerden ve 
             miktarlardan, sana özel bir paket oluşturalım.
           </span>
+
+          
 
           {/* uc ana kategoriyi burada custom packet sayfasinda tutmaktayim, ayni zamanda bu kategorilerin idlerini de global state imde tab olarak bulabilirsiniz */}
           <div className="category--container">

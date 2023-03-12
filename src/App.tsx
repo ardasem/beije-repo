@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import './styles/BodyStyle.css'
+import './styles/CustomPacketStyle.css'
 import './styles/HeaderStyle.css'
 import './styles/FooterStyle.css'
 import './styles/BurgerMenuStyle.css'
