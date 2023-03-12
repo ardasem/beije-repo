@@ -128,7 +128,7 @@ const CustomPacket: React.FC = () => {
 
        
           {/* bu kisimda sadece responsiveness ayari yapiyorum, sayfa kuculunce paketini gor butonu gozukuyor */}
-          {windowSize < 1050 && <div><button className="check-out--button" style={{margin:'15%',marginTop:'10px',alignSelf:'center'}}> Paketini Gör</button></div>}
+          {windowSize < 1050 && <div><button className="check-out--button mobile--button" > Paketini Gör</button></div>}
         </div>
 
         {/*Bu kisim ekranin sag kisminin bulundugu container, burada da urun isimlerini ve miktarlarini gosterebilmek icin

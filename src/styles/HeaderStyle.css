@@ -10,7 +10,8 @@
   }
   
   .beije--logo {
-    max-height: 45px;
+    align-self: center;
+    max-height: 35px;
   }
   
   .nav--link {
