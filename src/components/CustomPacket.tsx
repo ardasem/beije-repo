@@ -84,7 +84,7 @@ const CustomPacket: React.FC = () => {
 
         <div className="custompacket--container">
 
-        <div className="custompacket--left" style={windowSize < 1050 ? {minWidth:'100%'} : {}}>
+        <div className="custompacket--left" style={windowSize < 1050 ? {marginLeft:'0'} : {}}>
           <div className="custompacket--header">
             <h1>Kendi Paketini Oluştur</h1>
             <a>Nasıl Çalışır?</a>
@@ -128,7 +128,7 @@ const CustomPacket: React.FC = () => {
 
        
           {/* bu kisimda sadece responsiveness ayari yapiyorum, sayfa kuculunce paketini gor butonu gozukuyor */}
-          {windowSize < 1050 &&<button className="check-out--button" style={{width:'100%',alignSelf:'center'}}> Paketini Gör</button>}
+          {windowSize < 1050 && <div><button className="check-out--button" style={{width:'100%',alignSelf:'center'}}> Paketini Gör</button></div>}
         </div>
 
         {/*Bu kisim ekranin sag kisminin bulundugu container, burada da urun isimlerini ve miktarlarini gosterebilmek icin
@@ -147,6 +147,7 @@ const CustomPacket: React.FC = () => {
             </div>
             <img src="./icons/packet.webp" alt="" />
 
+          {/* bu component icerisinde, alinan miktarlara gore urunlerin isimlerini ve kategori basliklarini gosteriyorum, icerisinde daha detayli bilgi bulabilirsiniz. */}
             <CartComponent />
 
             {/* Bu kisimda ise totalPrice a gore buton veya paragraph olarak renderlayacagimi seciyorum. */}
