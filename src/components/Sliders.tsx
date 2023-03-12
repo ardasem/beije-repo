@@ -65,9 +65,10 @@ function Sliders() {
          {/* Burada gormus oldugunuz p elementi\ bir ust componentte guncellenen tab datasina gore slider basliklarini degistirmekte , 
          slider 2 ve slider 3 icin de asagida birer p elementi bulunuyor. */}
 
-        <p>{userDataState.sliderName1}</p>
+       
         <div className="slider--data">
-          <p>0</p>
+        <span>{userDataState.sliderName1}</span>
+          
           {/* Burada gormus oldugunuz conditional rendering bir ust componentte guncellenen tab datasina gore sliderlarin gosterecekleri datayi degistiriyor,
           bazi durumda direkt olarak slideri gostermiyor. 
           ilk tab icin 1,2 ve 3 nolu handle fonksiyonlari
@@ -126,13 +127,14 @@ function Sliders() {
               }}
             />
           )}
-          <p>{userDataState.maxVal}</p>
+          <div className="slider--values"><p>0</p> <p>{userDataState.maxVal}</p></div>
         </div>
 
-        <p>{userDataState.sliderName2}</p>
+       
 
         <div className="slider--data">
-          <p>0</p>
+        <p>{userDataState.sliderName2}</p>
+        
           {userDataState.tab == 0 && (
             <Slider
               className="slider"
@@ -186,14 +188,16 @@ function Sliders() {
             />
           )}
 
-          <p>{userDataState.maxVal}</p>
+<div className="slider--values"><p>0</p> <p>{userDataState.maxVal}</p></div>
         </div>
 
         {userDataState.sliderName3 !== "" && (
           <>
-            <p>{userDataState.sliderName3}</p>
+            
             <div className="slider--data">
-              <p>0</p>
+            <p>{userDataState.sliderName3}</p>
+            
+              
               {userDataState.tab === 0 && (
                 <Slider
                   className="slider"
@@ -211,7 +215,7 @@ function Sliders() {
                   }}
                 />
               )}
-              <p>60</p>
+              <div className="slider--values"><p>0</p> <p>{userDataState.maxVal}</p></div>
             </div>
           </>
         )}

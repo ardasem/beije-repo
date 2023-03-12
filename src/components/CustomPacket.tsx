@@ -84,7 +84,7 @@ const CustomPacket: React.FC = () => {
 
         <div className="custompacket--container">
 
-        <div className="custompacket--left" style={windowSize < 1050 ? {marginLeft:'0'} : {}}>
+        <div className="custompacket--left" style={windowSize < 1050 ? {marginLeft:'5%'} : {}}>
           <div className="custompacket--header">
             <h1>Kendi Paketini Oluştur</h1>
             <a>Nasıl Çalışır?</a>
@@ -97,26 +97,26 @@ const CustomPacket: React.FC = () => {
 
           {/* uc ana kategoriyi burada custom packet sayfasinda tutmaktayim, ayni zamanda bu kategorilerin idlerini de global state imde tab olarak bulabilirsiniz */}
           <div className="category--container">
-            <ul className="category--list">
-              <li
+        
+              <button
                 className="category--list--item"
                 onClick={() => handleTabChange(0)}
               >
                 beije Ped
-              </li>
-              <li
+              </button>
+              <button
                 className="category--list--item"
                 onClick={() => handleTabChange(1)}
               >
                 beije Günlük Ped
-              </li>
-              <li
+              </button>
+              <button
                 className="category--list--item"
                 onClick={() => handleTabChange(2)}
               >
                 beije Tampon
-              </li>
-            </ul>
+              </button>
+            
           </div>
 
          
@@ -128,7 +128,7 @@ const CustomPacket: React.FC = () => {
 
        
           {/* bu kisimda sadece responsiveness ayari yapiyorum, sayfa kuculunce paketini gor butonu gozukuyor */}
-          {windowSize < 1050 && <div><button className="check-out--button" style={{width:'100%',alignSelf:'center'}}> Paketini Gör</button></div>}
+          {windowSize < 1050 && <div><button className="check-out--button" style={{margin:'15%',marginTop:'10px',alignSelf:'center'}}> Paketini Gör</button></div>}
         </div>
 
         {/*Bu kisim ekranin sag kisminin bulundugu container, burada da urun isimlerini ve miktarlarini gosterebilmek icin
