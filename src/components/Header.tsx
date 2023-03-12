@@ -16,7 +16,7 @@ function Header() {
 
   },[]);
 
-
+// header uzerinde 3 div ,1 de gerektiginde kullanmak icin burger menu bulunmakta. Logo , nav linkleri ve iconlar bu kisimda.
   return (
     <header className="header--wrapper">
       

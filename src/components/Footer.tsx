@@ -24,6 +24,9 @@ function Footer() {
         <div className="footer--upper" style={windowSize < 1050 ? {textAlign:'center',justifyContent:'center',flexDirection:'column'} : {}}>
           <div className="footer--left">
             
+
+          {/*upper kismi left ve right olarak ikiye ayriliyor, sol tarafta keep in touch division inda :logo,header,p,text area ve button seklinde bir hiyerarsi mevcut
+          sag tarafta ise 3 farkli  list menu bulunmakta, stylingleri de footer--upper--list--element seklinde yapilmakta */}
             <div className="keep--in--touch">
               <img
                 className="beije--logo--black"
@@ -96,7 +99,7 @@ function Footer() {
           </div>
         </div>
 
-      
+          {/* bu kisimda ise footer in ust ve alt kismini ayiran cizgiden en alta kadar olan kisim mevcut */}
         <div className="footer--info--container">
           <div className="footer--info" style={windowSize < 1050 ? {textAlign:'center',alignSelf:'center',flexDirection:'column'} : {}}>
             <>

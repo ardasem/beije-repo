@@ -86,8 +86,8 @@ const CustomPacket: React.FC = () => {
 
         <div className="custompacket--left" style={windowSize < 1050 ? {marginLeft:'5%'} : {}}>
           <div className="custompacket--header">
-            <h1>Kendi Paketini Oluştur</h1>
-            <a>Nasıl Çalışır?</a>
+            <h1 >Kendi Paketini Oluştur</h1>
+            {windowSize>1050 ? <a>Nasıl Çalışır?</a>: <div/>}
           </div>
 
           <span className='text--span' >

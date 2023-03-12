@@ -53,7 +53,14 @@ const CartComponent: React.FC = () => {
     <div className="cart--info--container">
 
 
-
+    {/* bu kisimda sliderlardan gelen veriye gore hangi urunden ne kadar satin alinmak istendigini gosteren
+    kod bulunuyor headerArray icerisinde urun grubunun adi, altinda alinan urunun adedi sonrasinda da alinan urunun ismi
+    yazdirilmakta. bunlari yazdirmak icin her kategorideki herhangi bir urunun varligina gore basligi,
+    urunlerin her birinin ayri ayri varligina gore de isimlerini ve miktarlarini yazdiriyorum.
+    
+    delete button icin ise, tab farketmeksizin bu urunleri istedigimiz zaman cikartabildigimizden dolayi,
+    urun gruplarini bulunduklari tablara gore isimlendirdim, 1. tab yani 'beije ped' tabindaki tum elementleri tek seferde
+    silmek icin  o tab altina tutulan tum value lari sifirlayarak silme islemini gerceklestiriyorum.*/}
     <div className="cart--info">
     <h2>
         {userDataState.standardPadValue ||
