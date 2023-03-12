@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from 'react'
 
-function Footer() {
+const Footer: React.FC = () => {
 
   //windowSize degisimini yakalayabilmek icin useState ve useEffect kullandim.
   const [windowSize, setWindowSize] = useState(window.innerWidth);

@@ -2,7 +2,7 @@ import React from "react";
 import {useState,useEffect} from 'react'
 import Menu from './BurgerMenu'
 
-function Header() {
+const Header: React.FC = () => {
 
   //Bu useEffect de sayfayi responsive olarak yazabilmek icin window size width ini otomatik olarak guncelliyor.
   const [windowSize, setWindowSize] = useState(window.innerWidth);

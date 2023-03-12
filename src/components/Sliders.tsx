@@ -4,7 +4,7 @@ import { UserDataContext } from "../context/UserDataContext";
 import Slider from "@mui/material/Slider";
 
 
-function Sliders() {
+const Sliders: React.FC = () => {
   const { userDataState, setUserDataState } = useContext(UserDataContext); 
 
   
